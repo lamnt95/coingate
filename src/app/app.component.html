@@ -1,4 +1,466 @@
-<hello name="{{ name }}"></hello>
 <p>
-  Start editing to see some magic happen :)
+  {{ this.loading.txt }}
 </p>
+<button (click)="load()">Load</button>
+<!-- <button (click)="copyNews()">News</button>
+<button (click)="copyIntel()">Intel</button>
+<button (click)="copyResearch()">Research</button> -->
+
+<div>
+  <br />
+</div>
+<div class="tab">
+  <button
+    class="tablinks"
+    [ngClass]="{
+      proposol: tab == 1
+    }"
+    (click)="clickTab1()"
+  >
+    Onchain Update
+  </button>
+  <button
+    class="tablinks"
+    [ngClass]="{
+      proposol: tab == 2
+    }"
+    (click)="clickTab2()"
+  >
+    Official Update
+  </button>
+  <button
+    class="tablinks"
+    [ngClass]="{
+      proposol: tab == 3
+    }"
+    (click)="clickTab3()"
+  >
+    Research Messari
+  </button>
+  <button
+    class="tablinks"
+    [ngClass]="{
+      proposol: tab == 16
+    }"
+    (click)="clickTab(16)"
+  >
+    Research Delphi
+  </button>
+  <button
+    class="tablinks"
+    [ngClass]="{
+      proposol: tab == 17
+    }"
+    (click)="clickTab(17)"
+  >
+    Research theblock
+    <a href="https://www.theblockresearch.com/" target="_blank">...</a>
+  </button>
+  <button
+    class="tablinks"
+    [ngClass]="{
+      proposol: tab == 4
+    }"
+    (click)="clickTab4()"
+  >
+    TVL DefiLama
+  </button>
+  <button
+    class="tablinks"
+    [ngClass]="{
+      proposol: tab == 5
+    }"
+    (click)="clickTab(5)"
+  >
+    TVL DefiPulse
+  </button>
+  <button
+    class="tablinks"
+    [ngClass]="{
+      proposol: tab == 7
+    }"
+    (click)="clickTab(7)"
+  >
+    Revenue TokenTerminal
+  </button>
+  <button
+    class="tablinks"
+    [ngClass]="{
+      proposol: tab == 12
+    }"
+    (click)="clickTab(12)"
+  >
+    Revenue Growjo
+  </button>
+  <button
+    class="tablinks"
+    [ngClass]="{
+      proposol: tab == 8
+    }"
+    (click)="clickTab(8)"
+  >
+    Danh mục
+    <a
+      href="https://www.coingecko.com/vi/portfolios/public/BAh7BjoRcG9ydGZvbGlvX2lkaQOrX1k=--b66abee8a0a8940b39bc65e5a3118566f9d04d2b"
+      target="_blank"
+      >...</a
+    >
+  </button>
+  <button
+    class="tablinks"
+    [ngClass]="{
+      proposol: tab == 13
+    }"
+    (click)="clickTab(13)"
+  >
+    Gọi vốn
+  </button>
+  <button
+    class="tablinks"
+    [ngClass]="{
+      proposol: tab == 18
+    }"
+    (click)="clickTab(18)"
+  >
+    Note
+    <a
+      href="https://husteduvn-my.sharepoint.com/:o:/g/personal/lam_nt202010431_husteduvn_onmicrosoft_com/EltLBbhx5_NDvlZl5g7pg2oB5w7Tc_UzD4Shxr7FNS3szQ?e=pfwg7a"
+      target="_blank"
+      >...</a
+    >
+  </button>
+
+  <button
+    class="tablinks"
+    [ngClass]="{
+      proposol: tab == 6
+    }"
+    (click)="clickTab(6)"
+  >
+    Onchain Dune Analytics
+  </button>
+  <button
+    class="tablinks"
+    [ngClass]="{
+      proposol: tab == 9
+    }"
+    (click)="clickTab(9)"
+  >
+    Onchain The Block
+    <a
+      target="_blank"
+      href="https://www.theblockcrypto.com/data/crypto-markets/spot"
+      >...</a
+    >
+  </button>
+  <button
+    class="tablinks"
+    [ngClass]="{
+      proposol: tab == 10
+    }"
+    (click)="clickTab(10)"
+  >
+    Onchain CryptoQuant
+    <a
+      target="_blank"
+      href="https://cryptoquant.com/asset/btc/chart/exchange-flows"
+      >...</a
+    >
+  </button>
+  <button
+    class="tablinks"
+    [ngClass]="{
+      proposol: tab == 11
+    }"
+    (click)="clickTab(11)"
+  >
+    Onchain CoinGlass
+  </button>
+  <button
+    class="tablinks"
+    [ngClass]="{
+      proposol: tab == 14
+    }"
+    (click)="clickTab(14)"
+  >
+    Explorer Bitquery
+  </button>
+  <button
+    class="tablinks"
+    [ngClass]="{
+      proposol: tab == 15
+    }"
+    (click)="clickTab(15)"
+  >
+    Biểu đồ Blockchaincenter
+    <a target="_blank" href="https://www.blockchaincenter.net/">...</a>
+  </button>
+</div>
+<br />
+<br />
+<br />
+
+<div *ngIf="tab == 17">
+  <iframe
+    class="ifr"
+    src="https://www.theblockresearch.com/"
+    title="description"
+  ></iframe>
+</div>
+
+<div *ngIf="tab == 16">
+  <iframe
+    class="ifr"
+    src="https://members.delphidigital.io/"
+    title="description"
+  ></iframe>
+</div>
+
+<div *ngIf="tab == 15">
+  <iframe
+    class="ifr"
+    src="https://www.blockchaincenter.net/"
+    title="description"
+  ></iframe>
+</div>
+
+<div *ngIf="tab == 14">
+  <iframe
+    class="ifr"
+    src="https://explorer.bitquery.io/"
+    title="description"
+  ></iframe>
+</div>
+
+<div *ngIf="tab == 13">
+  <iframe
+    class="ifr"
+    src="https://www.dovemetrics.com/"
+    title="description"
+  ></iframe>
+</div>
+
+<div *ngIf="tab == 12">
+  <iframe class="ifr" src="https://growjo.com/" title="description"></iframe>
+</div>
+
+<div *ngIf="tab == 11">
+  <iframe
+    class="ifr"
+    src="https://www.coinglass.com/FundingRate"
+    title="description"
+  ></iframe>
+</div>
+
+<div *ngIf="tab == 10">
+  <iframe
+    class="ifr"
+    src="https://cryptoquant.com/asset/btc/chart/exchange-flows"
+    title="description"
+  ></iframe>
+</div>
+
+<div *ngIf="tab == 9">
+  <iframe
+    class="ifr"
+    src="https://www.theblockcrypto.com/data/crypto-markets/spot"
+    title="description"
+  ></iframe>
+</div>
+
+<div *ngIf="tab == 8">
+  <iframe
+    class="ifr"
+    src="https://www.coingecko.com/vi/portfolios/public/BAh7BjoRcG9ydGZvbGlvX2lkaQOrX1k=--b66abee8a0a8940b39bc65e5a3118566f9d04d2b"
+    title="description"
+  ></iframe>
+</div>
+
+<div *ngIf="tab == 7">
+  <iframe
+    class="ifr"
+    src="https://www.tokenterminal.com/"
+    title="description"
+  ></iframe>
+</div>
+
+<div *ngIf="tab == 6">
+  <iframe
+    class="ifr"
+    src="https://dune.xyz/browse/dashboards"
+    title="description"
+  ></iframe>
+</div>
+
+<div *ngIf="tab == 5">
+  <iframe
+    class="ifr"
+    src="https://www.defipulse.com/"
+    title="description"
+  ></iframe>
+</div>
+
+<div *ngIf="tab == 4">
+  <iframe
+    class="ifr"
+    src="https://defillama.com/chains"
+    title="description"
+  ></iframe>
+</div>
+
+<div *ngIf="tab == 3">
+  <iframe
+    class="ifr"
+    src="https://lamnt95.github.io/"
+    title="description"
+  ></iframe>
+</div>
+
+<table *ngIf="tab == 1">
+  <tr>
+    <th class="w300">Desc</th>
+    <!-- <th class="w100">importance</th> -->
+    <!-- <th class="w100">subCategory</th> -->
+    <!-- <th class="w100">status</th> -->
+    <!-- <th class="w100">date</th> -->
+    <th class="w100">Link</th>
+    <!-- <th class="w200">eventName</th> -->
+    <th class="w500">descriptionDetail</th>
+    <!-- <th>update</th> -->
+  </tr>
+  <tr *ngFor="let item of data">
+    <td class="w300">
+      <div class="rlt">
+        <div class="ilb">
+          <span>
+            <span class="medium" *ngIf="item.importance == 'Medium'"></span>
+            <span class="medium" *ngIf="item.importance == 'High'"></span>
+            <span class="medium" *ngIf="item.importance == 'High'"></span>
+            <span class="medium" *ngIf="item.importance == 'Very High'"></span>
+            <span class="medium" *ngIf="item.importance == 'Very High'"></span>
+            <span class="medium" *ngIf="item.importance == 'Very High'"></span>
+          </span>
+          <br *ngIf="item.importance != 'Low'" />
+        </div>
+        <div class="ilb">
+          <span>
+            <span class="status_completed" *ngIf="item.status == 'Completed'"
+              >v</span
+            >
+            <span class="status_completed" *ngIf="item.status == 'Proposed'"
+              >v</span
+            >
+            <span class="status_pending" *ngIf="item.status == 'Pending'"
+              >%</span
+            >
+            <span class="status_pending" *ngIf="item.status == 'In-Progress'"
+              >%</span
+            >
+            <span class="status_rejected" *ngIf="item.status == 'Canceled'"
+              >x</span
+            >
+            <span class="status_rejected" *ngIf="item.status == 'Rejected'"
+              >x</span
+            >
+            <span class="status_discussed" *ngIf="item.status == 'Discussed'"
+              >v</span
+            >
+            <span class="status_discussed" *ngIf="item.status == 'Discussed '"
+              >v</span
+            >
+            <span class="status_completed" *ngIf="item.status == 'Completed '"
+              >v</span
+            >
+            <span class="status_completed" *ngIf="item.status == 'Proposed '"
+              >v</span
+            >
+            <span class="status_pending" *ngIf="item.status == 'Pending '"
+              >%</span
+            >
+            <span class="status_rejected" *ngIf="item.status == 'Canceled '"
+              >x</span
+            >
+            <span class="status_pending" *ngIf="item.status == 'In-progress'"
+              >%</span
+            >
+          </span>
+        </div>
+      </div>
+      <div>{{ item.description }}</div>
+    </td>
+    <!-- <td
+      class="w100"
+      [ngClass]="{
+        high: item.importance == 'High'
+      }"
+    >
+      {{ item.importance }}
+    </td> -->
+    <!-- <td class="w100">{{ item.subCategory }}</td> -->
+    <!-- <td
+      class="w100"
+      [ngClass]="{
+        completed: item.status == 'Completed',
+        proposol: item.status == 'Proposed'
+      }"
+    >
+      {{ item.status }}
+    </td> -->
+    <!-- <td class="w100">{{ item.date }}</td> -->
+    <td class="w100">
+      <a
+        class="bl"
+        *ngFor="let item2 of item.resources; let i2 = index"
+        [href]="item2"
+        >Link {{ i2 + 1 }}</a
+      >
+    </td>
+    <!-- <td class="w200">{{ item.eventName }}</td> -->
+    <td class="w500">
+      <div
+        *ngIf="
+          item.update != null && item.update != undefined && item.update != ''
+        "
+      >
+        [Update]
+      </div>
+      <div
+        *ngIf="
+          item.update != null && item.update != undefined && item.update != ''
+        "
+      >
+        {{ item.update }}
+      </div>
+      <br
+        *ngIf="
+          item.update != null && item.update != undefined && item.update != ''
+        "
+      />
+      <div>{{ item.details }}</div>
+    </td>
+    <!-- <td>{{ item.update }}</td> -->
+  </tr>
+</table>
+
+<table *ngIf="tab == 2">
+  <tr>
+    <th>title</th>
+
+    <th>publishDate</th>
+
+    <th>assets</th>
+    <th>subType</th>
+    <th>Link</th>
+  </tr>
+  <tr *ngFor="let item of data2">
+    <td>{{ item.title }}</td>
+
+    <td>{{ item.publishDate }}</td>
+    <td>{{ item.assets }}</td>
+    <td>{{ item.subType }}</td>
+
+    <td>
+      <a class="bl" [href]="item.link">{{ item.source }}</a>
+    </td>
+  </tr>
+</table>

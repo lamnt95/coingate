@@ -1,3 +1,170 @@
 p {
   font-family: Lato;
 }
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.w100 {
+  width: 100px;
+  max-width: 100px;
+  word-wrap: break-word;
+}
+
+.w200 {
+  width: 200px;
+  max-width: 200px;
+  word-wrap: break-word;
+}
+
+.w300 {
+  width: 300px;
+  max-width: 300px;
+  word-wrap: break-word;
+}
+
+.w500 {
+  width: 800px;
+  max-width: 800px;
+  /* word-wrap: break-word; */
+}
+
+.ifr {
+  width: 100%;
+  height: 800px;
+}
+
+.bl {
+  display: block;
+}
+
+.completed {
+  background: greenyellow;
+}
+
+.proposol {
+  background: lightseagreen !important;
+}
+
+.high {
+  background: lightcoral;
+}
+
+body {
+  font-family: Arial;
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+.medium {
+  display: inline-block;
+  background: yellow;
+  width: 15px;
+  height: 15px;
+  border: solid 1px #111;
+}
+
+.high {
+  display: block;
+  background: yellow;
+  width: 30px;
+  height: 15px;
+  border: solid 1px #111;
+}
+
+.status_completed {
+  display: inline-block;
+  background: lightgreen;
+  width: 15px;
+  height: 15px;
+  border: solid 1px #111;
+}
+
+.status_pending {
+  display: inline-block;
+  background: lightskyblue;
+  width: 15px;
+  height: 15px;
+  border: solid 1px #111;
+}
+
+.status_rejected {
+  display: inline-block;
+  background: lightsalmon;
+  width: 15px;
+  height: 15px;
+  border: solid 1px #111;
+}
+
+.status_discussed {
+  display: inline-block;
+  background: lightyellow;
+  width: 15px;
+  height: 15px;
+  border: solid 1px #111;
+}
+
+.rlt {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ilb {
+  display: flex;
+}
+
+.veryhigh {
+  display: block;
+  background: yellow;
+  width: 45px;
+  height: 15px;
+  border: solid 1px #111;
+}
